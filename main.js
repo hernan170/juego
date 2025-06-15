@@ -1,4 +1,4 @@
-// Asegúrate de que el DOM esté completamente cargado antes de ejecutar el script
+
 document.addEventListener('DOMContentLoaded', () => {
     const hablarBtn = document.getElementById('hablarBtn');
     const mensajeInput = document.getElementById('mensajeInput');
@@ -11,9 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function hablar(texto) {
             const utterance = new SpeechSynthesisUtterance(texto);
 
-            // Opcional: Configurar propiedades de la voz
-            // Puedes obtener una lista de voces disponibles: window.speechSynthesis.getVoices()
-            // utterance.voice = window.speechSynthesis.getVoices().find(voice => voice.lang === 'es-ES' && voice.name === 'Google español');
+           
             utterance.lang = 'es-ES'; // Idioma (español de España)
             utterance.pitch = 1;     // Tono (0 a 2)
             utterance.rate = 1;      // Velocidad (0.1 a 10)
